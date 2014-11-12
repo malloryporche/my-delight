@@ -15,6 +15,8 @@
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
     
@@ -29,40 +31,47 @@
 
     
     <div class="container">
-        <div class="header">
-            <ul class="nav nav-pills pull-right">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <h3 class="text-muted">my-delight</h3>
-        </div>
+        
+        <!-- Full page background with caption carousel -->
+        <header id="myCarousel" class="carousel slide">
+        
+        <div class="row">
+        
+            <!-- FULL PAGE PICTURE BACKGROUND -->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 bg">
+            
+            <div class="row">
+                <!--Brand Logo -->
+                <div class="col-xs-2 col-sm-2 col-md-4 col-lg-4 col-xl-4 logo">
+                     <a href="index.html"><img src="img/logo.png" alt="delight-logo"></a>
+                </div>
 
-        <div class="jumbotron">
-            <h1>Hello!</h1>
-            <p class="lead">Your app is ready.</p>
-            <p><a class="btn btn-lg btn-success" href="#">Great!</a></p>
-        </div>
-
-        <div class="row marketing">
-            <div class="col-lg-6">
-                <h4>HTML5 Boilerplate</h4>
-                <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-                
-                <h4>Sass</h4>
-                <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
-                
-                <h4>Bootstrap</h4>
-                <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-                <h4>Modernizr</h4>
-                <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-                
+                <!--Site Navigation -->
+                <div class="col-xs-10 col-sm-10 col-md-8 col-lg-8 col-xl-8 navigation">
+                    <ul class="nav">
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Works</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
+           </div>
 
-        <div class="footer">
-            <p>Slush - The streaming scaffolding system.</p>
+           <div class="carousel-inner">
+               <div class="item active">
+                   <div class="fill"><h1>We Are<span> Creative</h1</span></div>
+               </div>
+               <div class="item">
+                   <div class="fill"><h1>We Heart<span> Design</h1></span></div>
+               </div>
+               <div class="item">
+                   <div class="fill"><h1>We Create<span> Stuff</h1></span></div>
+               </div>
+           </div>
         </div>
+        </header>
 
     </div>
     
@@ -84,9 +93,20 @@
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+    
+    <!-- jQuery -->
+    <script src="scripts/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="scripts/bootstrap.min.js"></script>
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+     <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
     <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -98,5 +118,7 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
         ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
+
+
 </body>
 </html>
